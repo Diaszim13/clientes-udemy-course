@@ -1,0 +1,59 @@
+<h1 class="mt-4">
+    Clientes
+</h1>
+
+<ol class="breadcrump mb-4">
+  <li class="breadcrumb-item active">
+    Cadastro
+  </li>
+</ol>
+
+<div class="container">
+   <form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="id">
+              ID:
+          </label>
+          <input type="text" id="id" class="form-control" [(ngModel)]="cliente.data" disabled="true">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="data">
+              Data cadastro:
+          </label>
+          <input type="text" id="data" class="form-control" disabled="true">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Nome">
+              Nome:
+          </label>
+          <input type="text" id="nome" [(ngModel)]="cliente.nome" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="CPF">
+              Cpf:
+          </label>
+          <input type="text" id="CPF" [(ngModel)]="cliente.cpf" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn btn-success" type="submit" (click)="salvar(this.form?.getRawValue())">
+          <i class="fa fa-save" ></i> Salvar
+        </button>
+      </div>
+
+    </div>
+  </form>
+</div>
